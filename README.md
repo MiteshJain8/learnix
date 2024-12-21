@@ -36,7 +36,7 @@ public/
 
 ## Features
 
-**Dyscalculia:** Learn and practice math concepts with interactive puzzles and games.
+<kbd>Dyscalculia:</kbd> Learn and practice math concepts with interactive puzzles and games.
 
 **ADHD:** Engage in short, focused activities designed to maintain attention.
 
