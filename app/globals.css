@@ -27,40 +27,41 @@ body {
   transition: background 0.3s ease, color 0.3s ease;
 }
 
-/* Memory card specific styles */
-.memory-card {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 0.5rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s, background-color 0.3s ease;
-  width: 100px; /* Adjust width as needed */
-  height: 150px; /* Adjust height as needed */
+/* Battery charge specific styles */
+.battery-container {
+  width: 100px;
+  height: 200px;
+  border: 2px solid #4caf50; /* Green border */
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
 }
 
-.memory-card:hover {
-  transform: scale(1.05);
-}
-
-/* Buttons */
-button {
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  font-weight: 500;
-  color: #ffffff;
-  background-color: var(--highlight);
-  border: none;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #1e40af; /* Darker blue */
+.battery {
+  width: 100%;
+  background-color: #4caf50; /* Green color */
+  position: absolute;
+  bottom: 0;
+  transition: height 0.3s ease;
 }
 
 /* Text alignment for messages */
 .text-center {
   text-align: center;
+}
+
+/* Dropdown styles */
+select {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #ccc;
+  background-color: #fff;
+  color: #333;
+  transition: border-color 0.3s ease;
+}
+
+select:focus {
+  border-color: var(--highlight);
+  outline: none;
 }
