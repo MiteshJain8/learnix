@@ -31,10 +31,10 @@ export default function HomePage() {
         {disabilities.map((disability, index) => (
           <div
             key={index}
-            className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
+            className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300"
           >
             <h3 className="text-2xl font-semibold text-blue-500">{disability.name}</h3>
-            <p className="text-gray-600 mt-2 mb-4">{disability.description}</p>
+            <p className="text-gray-600 dark:text-gray-300 mt-2 mb-4">{disability.description}</p>
             <Link
               href={disability.route}
               className="inline-block px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-colors duration-300"

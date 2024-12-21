@@ -2,20 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
+/* Define light and dark themes */
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --card-bg: #f9fafb; /* Light card background */
+  --card-text: #171717; /* Light text */
+  --highlight: #2563eb; /* Primary blue for light mode */
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.dark {
+  --background: #0a0a0a;
+  --foreground: #ededed;
+  --card-bg: #1f2937; /* Dark card background */
+  --card-text: #ffffff; /* Dark text */
+  --highlight: #60a5fa; /* Primary blue for dark mode */
 }
 
+/* Base body styles */
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Memory card specific styles */
+.memory-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--card-bg);
+  color: var(--card-text);
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s, background-color 0.3s ease;
+}
+
+.memory-card:hover {
+  transform: scale(1.05);
+}
+
+/* Buttons */
+button {
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #ffffff;
+  background-color: var(--highlight);
+  border: none;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #1e40af; /* Darker blue */
+}
+
+/* Text alignment for messages */
+.text-center {
+  text-align: center;
 }
