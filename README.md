@@ -4,7 +4,7 @@ Learnix is an educational platform designed to help people with learning disabil
 
 ## Project Structure
 
-```plaintext
+plaintext
 app/
 ├── layout.js
 ├── page.js
@@ -36,13 +36,13 @@ public/
 
 ## Features
 
-<kdb>Dyscalculia:</kdb> Learn and practice math concepts with interactive puzzles and games.
+<kbd>Dyscalculia:</kbd> Learn and practice math concepts with interactive puzzles and games.
 
-**ADHD:** Engage in short, focused activities designed to maintain attention.
+<kbd> ADHD:</kbd>  Engage in short, focused activities designed to maintain attention.
 
-**Memory Deficits:** Improve memory through repetition-based games and tasks.
+<kbd> Memory Deficits:<kbd>  Improve memory through repetition-based games and tasks.
 
-**Deaf/Dumb:** Learn communication with visual cues and sign language basics.
+<kbd> Deaf/Dumb:</kbd>  Learn communication with visual cues and sign language basics.
 s, take a look at the following resources:
 
 ## License
