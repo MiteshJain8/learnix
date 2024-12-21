@@ -1,5 +1,5 @@
 import Link from 'next/link';
-
+import Image from 'next/image';
 export default function HomePage() {
   const disabilities = [
     {
@@ -27,6 +27,7 @@ export default function HomePage() {
   return (
     <div>
       <h2 className="text-4xl font-bold text-center mb-8 text-blue-600">Select a Learning Experience</h2>
+      
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {disabilities.map((disability, index) => (
           <div

@@ -65,3 +65,12 @@ select:focus {
   border-color: var(--highlight);
   outline: none;
 }
+
+@keyframes rotate {
+  to{
+    transform: rotateZ(720deg);
+  }
+}
+.rotate{
+  animation: rotate 100s linear infinite;
+}
