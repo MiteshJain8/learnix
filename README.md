@@ -4,7 +4,7 @@ Learnix is an educational platform designed to help people with learning disabil
 
 ## Project Structure
 
-plaintext
+```plaintext
 app/
 ├── layout.js
 ├── page.js
@@ -33,7 +33,7 @@ public/
             ├── B.png
             ├── ...
             └── Z.png
-
+```
 ## Features
 
 <kbd>Dyscalculia:</kbd> Learn and practice math concepts with interactive puzzles and games.
