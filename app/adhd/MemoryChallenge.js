@@ -39,10 +39,10 @@ export default function MemoryChallenge() {
           <div
             key={card.id}
             onClick={() => handleCardClick(card)}
-            className={`p-4 border rounded-lg cursor-pointer transition-transform duration-300 transform hover:scale-110 ${
+            className={`memory-card ${
               flippedCards.includes(card) || matchedCards.includes(card)
-                ? 'bg-blue-500 text-white'
-                : 'bg-gray-200'
+                ? 'bg-[var(--highlight)] text-white'
+                : 'bg-[var(--card-bg)] text-[var(--card-text)]'
             }`}
           >
             {flippedCards.includes(card) || matchedCards.includes(card)

@@ -30,7 +30,7 @@ export default function FocusGame() {
       <p className="mb-4">Click the button as many times as you can in 30 seconds!</p>
       <button
         onClick={handleClick}
-        className={`mt-4 px-6 py-2 text-white bg-blue-500 rounded-lg hover:bg-blue-600 transition-transform duration-300 ${gameOver ? 'opacity-50 cursor-not-allowed' : 'transform hover:scale-110'}`}
+        className={`mt-4 px-6 py-2 text-white bg-[var(--highlight)] rounded-lg hover:bg-blue-600 transition-transform duration-300 ${gameOver ? 'opacity-50 cursor-not-allowed' : 'transform hover:scale-110'}`}
         disabled={gameOver}
       >
         Click Me!
