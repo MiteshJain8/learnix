@@ -40,7 +40,7 @@ public/
 
 <kbd> ADHD:</kbd>  Engage in short, focused activities designed to maintain attention.
 
-<kbd> Memory Deficits:<kbd>  Improve memory through repetition-based games and tasks.
+<kbd> Memory Deficits:</kbd>  Improve memory through repetition-based games and tasks.
 
 <kbd> Deaf/Dumb:</kbd>  Learn communication with visual cues and sign language basics.
 s, take a look at the following resources:
