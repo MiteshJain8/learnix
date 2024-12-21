@@ -3,6 +3,7 @@ import Link from 'next/link';
 import Layout from '../layout';
 
 export default function DyscalculiaPage() {
+
   return (
     <Layout>
       <h1 className="text-3xl font-bold mb-4">Welcome to the Dyscalculia Learning App</h1>
