@@ -1,7 +1,12 @@
+"use client";
+
 import { useState } from 'react';
-import FocusGame from './FocusGame';
-import MemoryChallenge from './MemoryChallenge';
-import AttentionTimer from './AttentionTimer';
+import dynamic from 'next/dynamic';
+
+const FocusGame = dynamic(() => import('./FocusGame'), { ssr: false });
+const MemoryChallenge = dynamic(() => import('./MemoryChallenge'), { ssr: false });
+const AttentionTimer = dynamic(() => import('./AttentionTimer'), { ssr: false });
+const ProgressTracker = dynamic(() => import('./ProgressTracker'), { ssr: false });
 
 const activities = [
   {
@@ -19,10 +24,15 @@ const activities = [
     description: "A timer to help with focused study sessions.",
     component: AttentionTimer,
   },
+  {
+    title: "Progress Tracker",
+    description: "Track your progress visually.",
+    component: ProgressTracker,
+  },
 ];
 
 export default function ADHDPage() {
-  const [currentActivity, setCurrentActivity] = useState(null);
+  const [CurrentActivity, setCurrentActivity] = useState(null);
 
   return (
     <div>
@@ -32,7 +42,7 @@ export default function ADHDPage() {
           <div
             key={index}
             className="bg-white shadow-lg rounded-lg p-6 hover:shadow-xl transition-shadow duration-300 cursor-pointer"
-            onClick={() => setCurrentActivity(activity.component)}
+            onClick={() => setCurrentActivity(() => activity.component)}
           >
             <h3 className="text-2xl font-semibold text-blue-500">{activity.title}</h3>
             <p className="text-gray-600 mt-2 mb-4">{activity.description}</p>
@@ -40,9 +50,9 @@ export default function ADHDPage() {
         ))}
       </div>
       <div className="mt-8">
-        {currentActivity ? (
+        {CurrentActivity ? (
           <div className="bg-white shadow-lg rounded-lg p-6">
-            {currentActivity && <currentActivity />}
+            <CurrentActivity />
           </div>
         ) : (
           <p className="text-center text-gray-600">Select an activity to start</p>
