@@ -32,11 +32,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: var(--card-bg);
-  color: var(--card-text);
   border-radius: 0.5rem;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   transition: transform 0.2s, background-color 0.3s ease;
+  width: 100px; /* Adjust width as needed */
+  height: 150px; /* Adjust height as needed */
 }
 
 .memory-card:hover {
