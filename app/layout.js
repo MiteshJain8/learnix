@@ -74,8 +74,9 @@ export default function Layout({ children }) {
           <div className="container flex-row md:flex-row md:justify-between mx-auto px-4 flex justify-start h-full md:items-center items-start">
             <h1 className="text-3xl font-bold">Learning App for Disabilities</h1>
             <div className='flex flex-row'>
-            <div className='flex  justify-between md:flex-row flex-col'><Link href="/wet" >
-              <button className='bg-blue-500 hover:bg-blue-700 h-full text-white font-bold py-2 md:my-0 px-4 my-1 rounded mx-3'>Weather</button></Link>
+            <div className='flex  justify-between md:flex-row flex-col'>
+              {/* <Link href="/wet" >
+              <button className='bg-blue-500 hover:bg-blue-700 h-full text-white font-bold py-2 md:my-0 px-4 my-1 rounded mx-3'>Weather</button></Link> */}
               <p id="name" className='font-semibold bg-blue-500 rounded my-2 md:my-0 px-4 place-content-center'>User</p>
               <button onClick={handleLogout} className="bg-blue-500  md:my-0 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3">Log out
               </button> 
