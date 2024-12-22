@@ -84,7 +84,12 @@ export default function HomePage() {
               Learn More
             </Link>
           </div>
+          
         ))}
+      </div>
+      <div className='place-content-center flex my-8'>
+            <Link href="/wet" >
+            <button className='bg-blue-500 hover:bg-blue-700 h-full text-white text-2xl  font-bold py-5 md:my-0 px-8 my-1 rounded mx-3'>Weather</button></Link>
       </div>
     </div>
   );
