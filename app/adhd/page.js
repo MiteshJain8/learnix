@@ -24,11 +24,6 @@ const activities = [
     description: "A timer to help with focused study sessions.",
     component: AttentionTimer,
   },
-  {
-    title: "Progress Tracker",
-    description: "Track your progress visually.",
-    component: ProgressTracker,
-  },
 ];
 
 export default function ADHDPage() {
