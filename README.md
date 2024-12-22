@@ -48,19 +48,12 @@ public/
 
 ## Requirements
 
-react-firebase-hooks
-
-firebase
-
-TensorFlow
-
-pickle-mixin
-
-Flask
-
-NumPy
-
-
+    npm install firebase
+    npm install react-firebase-hooks
+    pip install Flask
+    pip install numpy
+    pip install pickle-mixin
+    pip install tensorflow
 
 ## Bonus additions
 
@@ -82,7 +75,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ### Contributers
 
-<kbd>Member 1:</kbd> [Harshvardhan Mehta](https://github.com/Haksham)
-<kbd>Member 2:</kbd> [Mitesh Jain](https://github.com/MiteshJain8)
-<kbd>Member 3:</kbd> [Atharva Manchalkar](https://github.com/AtharvaManchalkar)
-<kbd>Member 4:</kbd> [Somnath Bankapure](https://github.com/somnath2374)
+<kbd>Member 1:</kbd> [Harshvardhan Mehta](https://github.com/Haksham)<br>
+<kbd>Member 2:</kbd> [Mitesh Jain](https://github.com/MiteshJain8)<br>
+<kbd>Member 3:</kbd> [Atharva Manchalkar](https://github.com/AtharvaManchalkar)<br>
+<kbd>Member 4:</kbd> [Somnath Bankapure](https://github.com/somnath2374)<br>
