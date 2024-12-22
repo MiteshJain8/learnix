@@ -15,7 +15,7 @@ const WeatherApp = () => {
       );
       if (!response.ok) {
         alert("Invalid city name");
-        router.push("/");
+        router.back();
         
       }else{
       const data = await response.json();
