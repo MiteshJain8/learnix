@@ -61,7 +61,7 @@ export default function FocusGame() {
         </button>
       </div>
       <p className="mt-4 text-lg">Score: <span className="font-bold">{score}</span></p>
-      <p className="mt-2 text-lg">Time Left: <span className="font-bold">{timeLeft}s</span></p>
+      <p className="mt-2 text-lg">Time Left: <span className="font-bold text-red-500">{timeLeft}s</span></p>
       {gameOver && (
         <>
           <p className="mt-2 text-red-500 font-bold">Game Over! Your final score is {score}.</p>
