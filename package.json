@@ -9,11 +9,11 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "firebase": "^11.1.0",
+    "next": "15.1.2",
     "@tensorflow-models/handpose": "^0.1.0",
     "@tensorflow/tfjs": "^4.22.0",
-    "firebase": "^11.1.0",
     "handtrackjs": "^0.1.5",
-    "next": "15.1.2",
     "picklejs": "^0.101.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",

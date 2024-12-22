@@ -1,10 +1,46 @@
 'use client';
 
 import Image from 'next/image';
-import { useState, useEffect } from 'react';
 import './globals.css';
 
+
+import {useAuthState} from 'react-firebase-hooks/auth';
+import { useEffect, useState} from 'react';
+import {auth} from '@/app/firebase/config';
+import { useRouter } from 'next/navigation';
+import { signOut } from 'firebase/auth';
+
 export default function Layout({ children }) {
+  //here
+
+  const [user] = useAuthState(auth);
+  const router = useRouter();
+  const [userSession, setUserSession] = useState(null);
+
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      setUserSession(sessionStorage.getItem('user'));
+    }
+  }, []);
+
+  useEffect(() => {
+    if (!user && !userSession) {
+      router.push('/sign-in');
+    }
+  }, [user, userSession, router]);
+
+  const handleLogout = () => {
+    signOut(auth).then(() => {
+        sessionStorage.removeItem('user');
+        router.push('/sign-in');
+      })
+      .catch((error) => {
+        console.error('Error signing out: ', error);
+      });
+  };//here
+
+
   const [darkMode, setDarkMode] = useState(false);
 
   useEffect(() => {
@@ -29,7 +65,12 @@ export default function Layout({ children }) {
         <header className="bg-blue-600 text-white py-4">
           <div className="container mx-auto px-4 flex justify-between items-center">
             <h1 className="text-3xl font-bold">Learning App for Disabilities</h1>
-            <div className='rotate'><button onClick={toggleTheme}><Image id="changepic" src={darkMode ? "/images/dyscalc_pic/moon.png" : "/images/dyscalc_pic/sun.png"} height={40} width={40} alt={"sun"}></Image></button></div>
+            <div className='flex'>
+              <button onClick={handleLogout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3">Log out
+              </button> 
+
+              <div className='rotate'><button onClick={toggleTheme}><Image id="changepic" src={darkMode ? "/images/dyscalc_pic/moon.png" : "/images/dyscalc_pic/sun.png"} height={40} width={40} alt={"sun"}></Image></button></div>
+            </div>
             {/* <button
               onClick={toggleTheme}
               className="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-700 transition"
@@ -39,7 +80,11 @@ export default function Layout({ children }) {
           </div>
           
         </header>
+
+
         <main className="container mx-auto px-4 py-8">{children}</main>
+
+
         <footer className="bg-blue-600 text-white fixed my-0 bottom-0  w-full py-4 mt-8">
           <div className="container mx-auto text-center">
             <p className="text-sm h-1 ">&copy; Made by Team: sMASH.</p>
