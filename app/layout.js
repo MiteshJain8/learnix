@@ -75,9 +75,7 @@ export default function Layout({ children }) {
             <h1 className="text-3xl font-bold">Learning App for Disabilities</h1>
             <div className='flex flex-row'>
             <div className='flex  justify-between md:flex-row flex-col'>
-              {/* <Link href="/wet" >
-              <button className='bg-blue-500 hover:bg-blue-700 h-full text-white font-bold py-2 md:my-0 px-4 my-1 rounded mx-3'>Weather</button></Link> */}
-              <p id="name" className='font-semibold bg-blue-500 rounded my-2 md:my-0 px-4 place-content-center'>User</p>
+              <p id="name" className='font-semibold bg-blue-500 rounded py-2 my-2 md:my-0 px-4 place-content-center'>User</p>
               <button onClick={handleLogout} className="bg-blue-500  md:my-0 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3">Log out
               </button> 
               </div>
@@ -100,7 +98,7 @@ export default function Layout({ children }) {
 
         <footer className="bg-blue-600 text-white fixed my-0 bottom-0  w-full py-4 mt-8">
           <div className="container mx-auto text-center">
-            <p className="text-sm h-1 ">&copy; Made by Team: sMASH.</p>
+            <p className="text-sm h-1 ">&copy; Made by Team: <strong>sMASH</strong>.</p>
           </div>
         </footer>
       </body>
