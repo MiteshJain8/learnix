@@ -74,3 +74,16 @@ select:focus {
 .rotate{
   animation: rotate 100s linear infinite;
 }
+
+.theme-icon {
+  width: 40px;
+  height: 40px;
+}
+
+@media only screen and (max-width: 768px) and (orientation: portrait) {
+  /* Styles for Android devices in portrait mode */
+  .theme-icon {
+    width: 60px;
+    height: 60px;
+  }
+}
