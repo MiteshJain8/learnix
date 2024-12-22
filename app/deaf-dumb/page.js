@@ -14,12 +14,12 @@ export default function DeafDumbPage() {
           </button>
         </Link>
         <Link href="/deaf-dumb/quiz">
-          <button className="px-6 py-3 bg-green-500 text-white rounded-lg hover:bg-green-600 transition">
+          <button className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
             Take Quiz
           </button>
         </Link>
         <Link href="/deaf-dumb/hand-gesture-quiz">
-          <button className="px-6 py-3 bg-red-500 text-white rounded-lg hover:bg-red-600 transition">
+          <button className="px-6 py-3 bg-blue-500 text-white rounded-lg hover:bg-blue-600 transition">
             Hand Gesture Quiz
           </button>
         </Link>
