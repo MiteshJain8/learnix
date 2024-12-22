@@ -1,6 +1,42 @@
+"use client";
 import Link from 'next/link';
-import Image from 'next/image';
+
+// import {useAuthState} from 'react-firebase-hooks/auth';
+// import { useEffect, useState} from 'react';
+// import {auth} from '@/app/firebase/config';
+// import { useRouter } from 'next/navigation';
+// import { signOut } from 'firebase/auth';
+
 export default function HomePage() {
+
+  // const [user] = useAuthState(auth);
+  // const router = useRouter();
+  // const [userSession, setUserSession] = useState(null);
+
+
+  // useEffect(() => {
+  //   if (typeof window !== 'undefined') {
+  //     setUserSession(sessionStorage.getItem('user'));
+  //   }
+  // }, []);
+
+  // useEffect(() => {
+  //   if (!user && !userSession) {
+  //     router.push('/sign-in');
+  //   }
+  // }, [user, userSession, router]);
+
+  // const handleLogout = () => {
+  //   signOut(auth).then(() => {
+  //       sessionStorage.removeItem('user');
+  //       router.push('/sign-in');
+  //     })
+  //     .catch((error) => {
+  //       console.error('Error signing out: ', error);
+  //     });
+  // };
+
+
   const disabilities = [
     {
       name: "Dyscalculia",
@@ -27,6 +63,11 @@ export default function HomePage() {
   return (
     <div>
       <h2 className="text-4xl font-bold text-center mb-8 text-blue-600">Select a Learning Experience</h2>
+
+      {/* <button onClick={handleLogout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Log out
+      </button> */}
+
       
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
         {disabilities.map((disability, index) => (
