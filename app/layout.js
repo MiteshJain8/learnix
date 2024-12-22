@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import './globals.css';
+import Link from 'next/link';
 
 
 import {useAuthState} from 'react-firebase-hooks/auth';
@@ -70,9 +71,10 @@ export default function Layout({ children }) {
     <html>
       <body className="bg-background text-foreground transition-colors duration-300">
         <header className="bg-blue-600 text-white py-4">
-          <div className="container mx-auto px-4 flex justify-between items-center">
+          <div className="container mx-auto px-4 flex justify-between h-full items-center">
             <h1 className="text-3xl font-bold">Learning App for Disabilities</h1>
-            <div className='flex'>
+            <div className='flex'><Link href="/wet" >
+              <button className='bg-blue-500 hover:bg-blue-700 h-full text-white font-bold py-2 px-4 rounded mx-3'>Weather</button></Link>
               <p id="name" className='font-semibold bg-blue-500 rounded px-4 place-content-center'>User</p>
               <button onClick={handleLogout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3">Log out
               </button> 
