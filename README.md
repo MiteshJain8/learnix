@@ -11,6 +11,7 @@ app/
 ├── layout.js
 ├── page.js
 ├── globals.css
+├── favicon.ico
 ├── dyscalculia/
 │   └── page.js
 ├── adhd/
@@ -28,13 +29,25 @@ app/
 │   └── components/
 │       ├── Lesson.js
 │       └── Quiz.js
+├── app.py
+├── jsconfig.json
+├── LICENSE
+├── next.config.mjs
+├── postcss.config.mjs
+├── tailwind.config.mjs
+├── package-lock.json
+├── package.json
+├── README.md
 public/
     └── images/
         └── handGestures/
-            ├── A.png
-            ├── B.png
-            ├── ...
-            └── Z.png
+        |   ├── A.png
+        |   ├── B.png
+        |   ├── ...
+        |   └── Z.png
+        └── dyscalc_pic/
+        └── memoryGame/
+          
 ```
 ## Features
 
