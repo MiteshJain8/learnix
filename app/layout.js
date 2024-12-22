@@ -25,6 +25,12 @@ export default function Layout({ children }) {
   }, []);
 
   useEffect(() => {
+    if (user) {
+      document.getElementById("name").innerHTML = user.email;
+    }
+  }, [user]);
+
+  useEffect(() => {
     if (!user && !userSession) {
       router.push('/sign-in');
     }
@@ -34,6 +40,7 @@ export default function Layout({ children }) {
     signOut(auth).then(() => {
         sessionStorage.removeItem('user');
         router.push('/sign-in');
+        document.getElementById("name").innerHTML="User"
       })
       .catch((error) => {
         console.error('Error signing out: ', error);
@@ -60,12 +67,13 @@ export default function Layout({ children }) {
   };
 
   return (
-    <html lang="en">
+    <html>
       <body className="bg-background text-foreground transition-colors duration-300">
         <header className="bg-blue-600 text-white py-4">
           <div className="container mx-auto px-4 flex justify-between items-center">
             <h1 className="text-3xl font-bold">Learning App for Disabilities</h1>
             <div className='flex'>
+              <p id="name" className='font-semibold bg-blue-500 rounded px-4 place-content-center'>User</p>
               <button onClick={handleLogout} className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mx-3">Log out
               </button> 
 
