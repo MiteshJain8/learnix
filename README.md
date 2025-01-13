@@ -2,7 +2,11 @@
 
 Learnix is an educational platform designed to help people with learning disabilities such as dyscalculia, ADHD, memory deficits, and those who are deaf or mute. The platform provides interactive lessons and quizzes to aid in learning and communication.
 
-<kbd>Link:</kbd> [Learnix](https://learnix-learnix-ten.vercel.app/sign-in)
+# Link to website:
+[Learnix](https://learnix-learnix-ten.vercel.app/sign-in)
+
+# To run locally using docker:
+    docker pull miteshjain8/learnix
 
 ## Project Structure
 
